@@ -4,16 +4,16 @@ namespace Nfq\Academy\Homework;
 
 class ClassA
 {
-    public $email;
-    public $name;
+    private $username;
+    private $name;
 
-    public function __construct(string $email, string $name)
+    public function login(string $username, string $password)
     {
-      $this->email = $email;
-      $this->name = $name;
+      $this->username = $username;
+      $this->password = $password;
     }
     public function getUser()
     {
-        echo "Welcome " . $this->name . " Your email: " . $this->email;
+        echo "Welcome " . $this->username;
     }
 }

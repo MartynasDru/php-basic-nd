@@ -4,13 +4,14 @@ namespace Nfq\Academy\Homework\Subpackage;
 
 class ClassB
 {
-    public $number;
-    public function __construct(int $number)
+    private $userStatus;
+
+    public function setUserStatus(string $userStatus)
     {
-      $this->number = $number;
+      $this->userStatus = $userStatus;
     }
-    public function calculateSquare()
+    public function getUserStatus()
     {
-        echo pow($this->number, 2);
+        echo "You`re " . $this->userStatus;
     }
 }

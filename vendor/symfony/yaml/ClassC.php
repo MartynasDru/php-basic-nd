@@ -4,16 +4,23 @@ namespace Symfony\Component\Yaml;
 
 class ClassC
 {
-    public $email;
-    public $name;
+    private $points;
 
-    public function __construct(string $email, string $name)
+    public function addPoints(int $points)
     {
-      $this->email = $email;
-      $this->name = $name;
+      $this->points += $points;
+      return $this;
     }
-    public function getUser()
+
+    public function usePoints(int $points)
     {
-        echo "Welcome " . $this->name . " Your email in Class C: " . $this->email;
+      $this->points -= $points;
+      return $this;
+    }
+
+    public function getPointsBalance()
+    {
+        echo "Current amount of points you have: " . $this->points;
+        return $this;
     }
 }
